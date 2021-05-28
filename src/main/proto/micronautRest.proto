@@ -1,0 +1,20 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_package = "com.zup";
+option java_outer_classname = "MicronautRest";
+option objc_class_prefix = "HLW";
+
+package com.zup;
+
+service MicronautRestService {
+  rpc send (MicronautRestRequest) returns (MicronautRestReply) {}
+}
+
+message MicronautRestRequest {
+  string name = 1;
+}
+
+message MicronautRestReply {
+  string message = 1;
+}
